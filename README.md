@@ -20,6 +20,8 @@ This script provides a restfull server for testing purpose
 
         sh install.sh customname  #set a custom for the alias
 
+    (Reload your terminal after set the alias)
+
 ## Usage
 
     cd ~/my/custom/path

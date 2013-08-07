@@ -7,6 +7,6 @@ else
 fi
 
 
-echo "alias $script=\"node $(pwd)/server.js\""
+echo "alias $script=\"node $(pwd)/server.js\"" >> ~/.bashrc
 
 
