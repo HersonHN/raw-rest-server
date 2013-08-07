@@ -70,7 +70,6 @@ function getDefaultData() {
         return data;
     } catch(e) {
         console.log('cannot load data from execution path');
-        throw e;
     }
     try {
         path = script_path + '/../data/defaults.json';
@@ -79,7 +78,6 @@ function getDefaultData() {
         return data;
     } catch(e) {
         console.log('cannot load data from script path');
-        throw e;
     }
 
     return data;
