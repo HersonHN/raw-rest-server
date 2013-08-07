@@ -7,6 +7,7 @@ This script provides a restfull server for testing purpose
 1. Clone the repo
 
         git clone https://github.com/HersonHN/raw-rest-server.git
+        cd raw-rest-server
 
 2. Install dependencies
 
