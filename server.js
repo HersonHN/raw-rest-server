@@ -59,28 +59,18 @@ Array.prototype.remove = function(from, to) {
 
 
 function getDefaultData() {
-    var path, data;
-    path = '';
-    data = {};
+    return (loadFrom(execution_path) || loadFrom(script_path) || {})
 
-    try {
-        path = execution_path + '/defaults.json';
-        data = require(path);
-        console.log('loading data from ' + path);
-        return data;
-    } catch(e) {
-        console.log('cannot load data from execution path');
+    function loadFrom(where) {
+        where += '/defaults.json';
+        try {
+            var data = require(where);
+            if (data) console.log("Loading data from:", where);
+            return data;
+        } catch(e) {
+            return false;
+        }
     }
-    try {
-        path = script_path + '/../data/defaults.json';
-        data = require(path);
-        console.log('loading data from ' + path);
-        return data;
-    } catch(e) {
-        console.log('cannot load data from script path');
-    }
-
-    return data;
 }
 
 
